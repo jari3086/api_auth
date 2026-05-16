@@ -5,7 +5,7 @@
 class Usuario {
     // Propiedades de conexión y tabla
     private $conn;
-    private $table_name = "usuarios";
+    private $table_name = "usuario";
 
     // Propiedades del usuario
     public $id;
