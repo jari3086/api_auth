@@ -8,7 +8,7 @@ class Usuario {
     private $table_name = "usuario";
 
     // Propiedades del usuario
-    public $id;
+    public $id_usuario;
     public $username;
     public $password;
     public $email;
@@ -63,7 +63,7 @@ class Usuario {
      */
     public function login() {
         // Query para buscar usuario por username
-        $query = "SELECT id, username, password, email 
+        $query = "SELECT id_usuario, username, password, email 
                   FROM " . $this->table_name . " 
                   WHERE username = :username 
                   LIMIT 1";
@@ -100,7 +100,7 @@ class Usuario {
      * @return boolean
      */
     public function existeUsername() {
-        $query = "SELECT id FROM " . $this->table_name . " 
+        $query = "SELECT id_usuario FROM " . $this->table_name . " 
                   WHERE username = :username LIMIT 1";
 
         $stmt = $this->conn->prepare($query);
@@ -116,7 +116,7 @@ class Usuario {
      * @return boolean
      */
     public function existeEmail() {
-        $query = "SELECT id FROM " . $this->table_name . " 
+        $query = "SELECT id_usuario FROM " . $this->table_name . " 
                   WHERE email = :email LIMIT 1";
 
         $stmt = $this->conn->prepare($query);

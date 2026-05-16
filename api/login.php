@@ -46,7 +46,7 @@ if(
             "success" => true,
             "message" => "Autenticación satisfactoria",
             "data" => array(
-                "id" => $result['id'],
+                "id_usuario" => $result['id_usuario'],
                 "username" => $result['username'],
                 "email" => $result['email'],
                 "token" => $token // Token de sesión
